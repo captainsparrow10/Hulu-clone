@@ -1,22 +1,32 @@
 import React from "react";
-import { HomeIcon } from "@heroicons/react/solid";
 import Image from "next/image";
+import HeaderItem from "./HeaderItem";
+import {
+	HomeIcon,
+	LightningBoltIcon,
+	UserIcon,
+	SearchIcon,
+	CollectionIcon,
+	BadgeCheckIcon,
+} from "@heroicons/react/solid";
 export default function Header() {
 	return (
-		<header className="flex justify-between p-4">
-			<div>
-				<HomeIcon className="h-6" />
+		<header className="header">
+			<div className="div-header-item">
+				<HeaderItem title="home" Icon={HomeIcon} />
+				<HeaderItem title="trending" Icon={LightningBoltIcon} />
+				<HeaderItem title="verified" Icon={BadgeCheckIcon} />
+				<HeaderItem title="collections" Icon={CollectionIcon} />
+				<HeaderItem title="search" Icon={SearchIcon} />
+				<HeaderItem title="account" Icon={UserIcon} />
 			</div>
-			<div>
-				<Image
-					className="bg-transparent"
-					src={require("./hulu-logo-black-and-white.png")}
-					alt="Hulu"
-					width={200}
-					height={100}
-					layout="fixed"
-				/>
-			</div>
+			<Image
+				className="bg-transparent object-contain"
+				src={require("./hulu.png")}
+				alt="Hulu"
+				width={100}
+				height={50}
+			/>
 		</header>
 	);
 }

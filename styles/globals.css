@@ -2,8 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  body{
-    @apply bg-[#06202A] text-gray-300
+@layer base {
+	body {
+		@apply bg-[#06202A] text-gray-300;
+	}
+}
+@layer components {
+	/* Header */
+	.header {
+		@apply flex flex-col items-center sm:flex-row justify-between m-5 h-auto;
+	}
+	.div-header-item {
+		@apply flex justify-evenly flex-grow max-w-2xl;
+	}
+	.div-icon {
+		@apply flex flex-col items-center cursor-pointer w-12 sm:w-20 hover:text-white;
+	}
+	.icon {
+		@apply h-8 mb-1 group-hover:animate-bounce;
+	}
+	.title-icon {
+		@apply tracking-widest opacity-0 group-hover:opacity-100 uppercase;
+	}
+	/* Nav Bar */
+  .div-navbar{
+    @apply flex px-10 sm:px-20 text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll scrollbar-hide
   }
+	.title-navbar {
+		@apply cursor-pointer transition duration-100 transform hover:scale-125 hover:text-white active:text-red-500 last:pr-24;
+	}
+  
 }
