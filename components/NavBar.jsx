@@ -9,7 +9,7 @@ export default function NavBar() {
 			<div className="div-navbar">
 				{Object.entries(requests).map(([key, { title, url }]) => (
 					<h2
-						key={title}
+						key={key}
             onClick={() => router.push(`/?genre=${key}`)}
 						className="title-navbar"
 					>
