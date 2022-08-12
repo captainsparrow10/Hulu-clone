@@ -3,7 +3,7 @@ import React, { forwardRef } from "react";
 import { ThumbUpIcon } from "@heroicons/react/outline";
 
 const Thumbnail = forwardRef(({ result }, ref) => {
-	const BASE_URL = "http://image.tmdb.org/t/p/original/"
+	const BASE_URL = "http://image.tmdb.org/t/p/original/";
 	return (
 		<div
 			ref={ref}
@@ -36,4 +36,5 @@ const Thumbnail = forwardRef(({ result }, ref) => {
 	);
 });
 
+Thumbnail.displayName = "Thumbnail";
 export default Thumbnail;
