@@ -10,7 +10,7 @@ export default function index({request}) {
 		<div>
 			<Head>
 				<title> Hulu </title>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/Hulu.ico" />
 			</Head>
 			{/* Header */}
 			<Header />
